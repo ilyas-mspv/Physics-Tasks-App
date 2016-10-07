@@ -38,6 +38,7 @@ import imspv.lycee.physics.helper.JSONParser;
 public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
 
     //TODO saving data to sharedPrefs
+    private Context context;
     private ProgressDialog dialog;
     JSONParser jParser = new JSONParser();
     ArrayList<HashMap<String, String>> tasksList;
@@ -52,7 +53,7 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
     private static final String COMPLEXITY = "complexity";
     public  ListView lv;
     JSONArray tasks = null;
-    Context context;
+
     SimpleAdapter simpleAdapter;
 
     SharedPreferences sharedPref;
@@ -77,22 +78,26 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
             @Override
             public void run() {
 
-
-               if(isOnline()){
-
                 mSwipeRefreshLayout.setRefreshing(true);
 
                 mSwipeRefreshLayout.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         mSwipeRefreshLayout.setRefreshing(false);
-
-                        if(tasksList.isEmpty()){
-                            new LoadAllTasks().execute();
+                        ConnectivityManager connMgr = (ConnectivityManager)
+                                getSystemService(Context.CONNECTIVITY_SERVICE);
+                        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+                        if (networkInfo != null && networkInfo.isConnected()) {
+                            if(tasksList.isEmpty()){
+                                new LoadAllTasks().execute();
+                            }
+                        } else {
+                            Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                         }
+
                     }
                 }, 3000);
-               }
+
             }
         });
 
@@ -119,12 +124,15 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
             @Override
             public void run() {
                 mSwipeRefreshLayout.setRefreshing(false);
-                if(isOnline()){
+                ConnectivityManager connMgr = (ConnectivityManager)
+                        getSystemService(Context.CONNECTIVITY_SERVICE);
+                NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+                if (networkInfo != null && networkInfo.isConnected()) {
                     if(tasksList.isEmpty()){
-                        Toast.makeText(getApplicationContext(),"No task found or check your internet connection",Toast.LENGTH_SHORT).show();
-                    }else{
                         new LoadAllTasks().execute();
                     }
+                } else {
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         }, 3000);
@@ -145,19 +153,29 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent details = new Intent(getApplicationContext(), TaskDetailsActivity.class);
+
                 String id = ((TextView) view.findViewById(R.id.id)).getText().toString();
                 String created_at = ((TextView) view.findViewById(R.id.created_at)).getText().toString();
                 String title = ((TextView) view.findViewById(R.id.title)).getText().toString();
                 String updated_at = ((TextView) view.findViewById(R.id.updated_at)).getText().toString();
                 String task = ((TextView) view.findViewById(R.id.task_row)).getText().toString();
                 String complexity = ((TextView) view.findViewById(R.id.complexity)).getText().toString();
-                Intent details = new Intent(getApplicationContext(), TaskDetailsActivity.class);
+
                 details.putExtra(TAG_ID, id);
                 details.putExtra(TAG_TITLE, title);
                 details.putExtra(TAG_TASK, task);
                 details.putExtra(COMPLEXITY,complexity);
                 details.putExtra(TAG_CREATED, created_at);
                 details.putExtra(TAG_UPDATED, updated_at);
+
+                //sharedPrefs
+                SharedPreferences.Editor  editor = sharedPref.edit();
+                editor.putString(TAG_TITLE,title);
+                editor.putString(TAG_TASK,task);
+                editor.putString(COMPLEXITY,complexity);
+
+                editor.apply();
                 startActivityForResult(details,100);
             }
         });
@@ -236,8 +254,6 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
                             map.put(TAG_CREATED, created_at);
                             map.put(TAG_UPDATED, updated_at);
                             tasksList.add(map);
-
-
 
                         }
                     }

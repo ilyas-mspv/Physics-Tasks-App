@@ -50,8 +50,8 @@
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activities.SettingsActivity"
-            android:label="@string/title_activity_settings"
+            android:name=".Activities.FilterActivity"
+            android:label="@string/title_activity_filter"
             android:parentActivityName=".Activities.AllTasksActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -59,10 +59,9 @@
                 android:value="imspv.lycee.physics.Activities.AllTasksActivity" />
         </activity>
         <activity
-            android:name=".Activities.FilterActivity"
-            android:label="@string/title_activity_filter"
-            android:parentActivityName=".Activities.AllTasksActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".Activities.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".Activities.AllTasksActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="imspv.lycee.physics.Activities.AllTasksActivity" />

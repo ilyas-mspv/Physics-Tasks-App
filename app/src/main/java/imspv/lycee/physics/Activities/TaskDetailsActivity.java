@@ -3,6 +3,7 @@ package imspv.lycee.physics.Activities;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -37,14 +38,14 @@ public class TaskDetailsActivity extends AppCompatActivity {
     private static final String TAG_UPDATED = "updated_at";
     private static final String COMPLEXITY = "complexity";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_details);
-        init();
-        new GetTaskDetails().execute();
-        getIntentsFromAllTasks();
 
+        init();
+        getIntentsFromAllTasks();
         iniToolbar();
     }
 
@@ -72,7 +73,7 @@ public class TaskDetailsActivity extends AppCompatActivity {
         title = (TextView) findViewById(R.id.title);
         taskss = (TextView) findViewById(R.id.task);
         complexity = (TextView) findViewById(R.id.complexity);
-
+        new GetTaskDetails().execute();
     }
 
     class GetTaskDetails extends AsyncTask<String,String,String>{

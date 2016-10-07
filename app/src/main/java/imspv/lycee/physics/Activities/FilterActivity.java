@@ -118,11 +118,12 @@ public class FilterActivity extends AppCompatActivity {
             List <String> subtopicsL = new ArrayList<>();
 
             for (int i = 0; i < topics.size(); i++){
-                for (int ii = 0; ii< subtopics.size();ii++){
-                    topicsL.add(topicsData.getTopicText(i));
-                    subtopicsL.add(topicsData.getSubtopicText(i,ii));
-                }
-            }
+                topicsL.add(topicsData.getTopicText(i));
+
+            for (int a = 0; a< subtopics.size();a++){
+
+                subtopicsL.add(topicsData.getSubtopicText(a,i));
+            }}
             ArrayAdapter<String> topicsAdapter = new ArrayAdapter<String>(getApplicationContext(),
                     android.R.layout.simple_spinner_item, topicsL);
             ArrayAdapter<String> subtopicsAdapter = new ArrayAdapter<String>(getApplicationContext(),
