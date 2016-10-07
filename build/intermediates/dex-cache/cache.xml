@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_aaa7fe0b50f3845c4280f3a24aa6d46ca4227ea1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_8ba2b78a865f791c19da11f3277e72237e052705.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_b3ae8be31a4b11e68850c4b267bbb5e55df0af38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_2eb68206bdf03961539c667d8cff26b087127101.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_0a1a9ae1067d26c543f517841a2c23ee33b77c72.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="a69acebc9ead1327df82bdac471660a9687baf88">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\instant-run_334799f08f29ff0eba26af30321c360abbef532a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_962c334744e317de6b895db8c4238ea37d14fdf0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="104b2a3904f834f0e8046be34ac9c8c23c919eea">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_2e5463175b4a97a93a3f6f0b6b914dc60835ac2f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_abd6a12a79ed24c91405dbbe5f3da2e6dd6e3c2b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_0abc8498acb680870855351e07f1fc04e635e568.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_db99c16dd82783a0f305d910a696a151b4661661.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\de.hdodenhof-circleimageview-2.1.0_233bf8b93406b20309d7d9ad3c983c418a15b803.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_88c50a19c26acaa49e3276f6ec2e92b76c23f5ea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_b0de8d8c655f9f8920c036601e7c3c99f877cf39.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_e4ad8ad03fe1b8c0f01b2fca2c59c7eebbf29736.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_635035bd1d259808cd9690d3d2b4ca001243ed8e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.1_1d02f11034b13fcb541e5a75203bef8dc2cd0307.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_cfe2dd7322139b026888690ff40704d167efad6c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_9c2a0ecedbb58b97cb9dd9be9b2b9d7c4463d7a9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android Projects\Lycee.Physics\app\libs\json-20090211.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c183aa3a2a6250293808bba12262c8920ce5a51c">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\json-20090211_ed0efce9f7e99c39adbbdef27774cad85f2a1f7a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Android Projects\Lycee.Physics\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_5189148ff5c8b118c4fd51683a08e3f40fa024da.jar" />
+    </item>
+
+</items>

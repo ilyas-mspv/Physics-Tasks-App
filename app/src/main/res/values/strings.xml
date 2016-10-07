@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Physics</string>
+
+    <string name="task_title">Task title</string>
+    <string name="task">Task</string>
+    <string name="task_complexity">Complexity</string>
+    <string name="created_at">Created at </string>
+    <string name="updated_at">Updated at </string>
+    <string name="ent_topic_spinner">enterkfd</string>
+    <string name="select_topic">Select Topic</string>
+    <string name="select_subtopic">Select Subtopic</string>
+
+    <string-array name="complexities">
+        <item>Nope</item>
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+        <item>Expert</item>
+    </string-array>
+
+    <string name="task_id_number">Task </string>
+    <string name="loading">Loading task details. Please wait…</string>
+    <string name="ok">OK</string>
+
+    <string name="creating">Creating Task</string>
+    <string name="info">Task Description</string>
+
+
+    <string name="title_activity_main2">fed</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="create_task">Create task</string>
+    <string name="create_desc">You can create your own task for everybody</string>
+    <string name="change_desc">You can change theme of the possible options</string>
+
+    <string name="create_task_btn">Create</string>
+    <string name="change_theme">Change Theme</string>
+
+    <string name="title_activity_create_task">Create Task</string>
+    <string name="title_activity_show_tasks">Physics</string>
+    <string name="title_activity_task_details">Task Details</string>
+    <string name="title_activity_filter">Filter</string>
+</resources>

@@ -1,0 +1,41 @@
+<resources>
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="FirstTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">#546E7A</item>
+        <item name="colorPrimaryDark">#455A64</item>
+        <item name="colorAccent">#000000</item>
+    </style>
+
+    <style name="SecondTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryDark">#1E88E5</item>
+        <item name="colorAccent">#82B1FF</item>
+    </style>
+
+    <style name="ThirdTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">#b72732</item>
+        <item name="colorPrimaryDark">#b72732</item>
+        <item name="colorAccent">#b72732</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

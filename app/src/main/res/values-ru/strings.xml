@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Физика</string>
+    <string name="change_theme">Изменить тему</string>
+    <string name="create_task">Создать Задачу</string>
+    <string name="created_at">Создано </string>
+    <string name="task">Задача</string>
+    <string name="task_complexity">Сложность</string>
+    <string name="task_title">Название Задачи</string>
+    <string name="title_activity_create_task">Создать Задачу</string>
+    <string name="title_activity_settings">Настройки</string>
+    <string name="title_activity_show_tasks">Физика</string>
+    <string name="title_activity_task_details">Подробности</string>
+    <string name="updated_at">Обновлено</string>
+    <string name="change_desc">Вы можете изменить тему из возможных тем</string>
+    <string name="create_desc">Вы можете создать свои задачи для всех</string>
+    <string name="create_task_btn">Создать</string>
+    <string name="creating">Создание Задачи</string>
+    <string name="info">Описание Задачи</string>
+    <string name="loading">Загрузка задачи. Подождите пожалуйста..</string>
+    <string name="ok">Хорошо</string>
+    <string name="task_id_number">Задача </string>
+</resources>
