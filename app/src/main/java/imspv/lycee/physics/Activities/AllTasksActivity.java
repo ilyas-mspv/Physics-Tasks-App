@@ -57,8 +57,10 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
     SimpleAdapter simpleAdapter;
 
     SharedPreferences sharedPref;
-    SwipeRefreshLayout mSwipeRefreshLayout;
+    public static String MY_PREF = "TaskData";
 
+    SwipeRefreshLayout mSwipeRefreshLayout;
+TextView noInternet;
 
 
 
@@ -69,7 +71,11 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
         inits();
         initToolbar();
 
-        sharedPref = getSharedPreferences("TaskData", Context.MODE_PRIVATE);
+
+        noInternet = (TextView) findViewById(R.id.no_internet);
+        noInternet.setVisibility(View.GONE);
+
+        sharedPref = getSharedPreferences(MY_PREF, Context.MODE_PRIVATE);
 
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refresh);
         mSwipeRefreshLayout.setOnRefreshListener(this);
@@ -92,7 +98,7 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
                                 new LoadAllTasks().execute();
                             }
                         } else {
-                            Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
+                            noInternet.setVisibility(View.VISIBLE);
                         }
 
                     }
@@ -128,11 +134,10 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
                         getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
                 if (networkInfo != null && networkInfo.isConnected()) {
-                    if(tasksList.isEmpty()){
                         new LoadAllTasks().execute();
-                    }
+
                 } else {
-                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
+                    noInternet.setVisibility(View.VISIBLE);
                 }
             }
         }, 3000);
@@ -171,11 +176,14 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
 
                 //sharedPrefs
                 SharedPreferences.Editor  editor = sharedPref.edit();
+                editor.putString(TAG_ID,id);
                 editor.putString(TAG_TITLE,title);
                 editor.putString(TAG_TASK,task);
                 editor.putString(COMPLEXITY,complexity);
-
+                editor.putString(TAG_CREATED,created_at);
+                editor.putString(TAG_UPDATED,updated_at);
                 editor.apply();
+
                 startActivityForResult(details,100);
             }
         });
@@ -226,7 +234,6 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
 
         @Override
         protected String doInBackground(String... strings) {
-            if(isOnline()){
                 tasksList.clear();
                 List<NameValuePair> params = new ArrayList<NameValuePair>();
                 JSONObject json = jParser.makeHttpRequest(url_all_tasks,"GET",params);
@@ -260,9 +267,7 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-            }else{
-                Toast.makeText(getApplicationContext(),"Check Internet Connection",Toast.LENGTH_LONG).show();
-            }
+
 
             return null;
         }
@@ -280,8 +285,6 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
 
                     lv.setAdapter(simpleAdapter);
                     simpleAdapter.notifyDataSetChanged();
-
-
                 }
             });
 

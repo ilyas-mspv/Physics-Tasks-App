@@ -1,6 +1,7 @@
 package imspv.lycee.physics.Activities;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import imspv.lycee.physics.R;
 
@@ -21,16 +23,18 @@ public class TaskDetailsActivity extends AppCompatActivity {
 
     private ProgressDialog pDialog;
 //TODO get data from sharedPrefs
-    String id;
-    String Tasktitle;
-    String Task;
-    String compexity;
-    String created_at;
-    String updated_at;
-    TextView title;
-    TextView taskss;
-    TextView complexity;
+    String id,
+        Tasktitle,
+        Task,
+        compexity,
+        created_at,
+        updated_at;
 
+    TextView title,taskss,complexity;
+
+
+    SharedPreferences sharedPref;
+    public static String MY_PREF = "TaskData";
     private static final String TAG_ID = "id";
     private static final String TAG_TITLE = "title";
     private static final String TAG_TASK = "task";
@@ -47,6 +51,10 @@ public class TaskDetailsActivity extends AppCompatActivity {
         init();
         getIntentsFromAllTasks();
         iniToolbar();
+
+        sharedPref = getSharedPreferences(MY_PREF, Context.MODE_PRIVATE);
+        sharedPref.getString("title",TAG_TITLE);
+
     }
 
     private void getIntentsFromAllTasks() {

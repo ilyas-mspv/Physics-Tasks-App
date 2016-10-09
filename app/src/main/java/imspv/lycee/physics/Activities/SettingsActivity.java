@@ -147,8 +147,9 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             addPreferencesFromResource(R.xml.pref_general);
             setHasOptionsMenu(true);
 
+            
 
-            bindPreferenceSummaryToValue(findPreference("example_text"));
+//            bindPreferenceSummaryToValue(findPreference("example_text"));
             bindPreferenceSummaryToValue(findPreference("example_list"));
         }
 
@@ -186,7 +187,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
     }
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public  class DataSyncPreferenceFragment extends PreferenceFragment {
+    public static class DataSyncPreferenceFragment extends PreferenceFragment {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);

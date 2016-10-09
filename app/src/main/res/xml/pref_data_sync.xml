@@ -9,8 +9,8 @@
         android:positiveButtonText="@null"
         android:title="@string/pref_title_sync_frequency" />
 
-    <Preference android:title="@string/pref_title_system_sync_settings">
-        <intent android:action="android.settings.SYNC_SETTINGS" />
-    </Preference>
+    <!--<Preference android:title="@string/pref_title_system_sync_settings">-->
+        <!--<intent android:action="android.settings.SYNC_SETTINGS" />-->
+    <!--</Preference>-->
 
 </PreferenceScreen>

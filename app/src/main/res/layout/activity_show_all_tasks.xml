@@ -20,31 +20,45 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
-<RelativeLayout
-    android:layout_width="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:layout_height="match_parent">
 
-    <android.support.v4.widget.SwipeRefreshLayout
-
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:id="@+id/refresh"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="10dp">
+        android:id="@+id/all_task_container"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent">
 
-        <ListView
-            android:layout_width="match_parent"
+        <TextView
+            android:text="@string/no_internet"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tasksList"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/no_internet"
 
-    </android.support.v4.widget.SwipeRefreshLayout>
-</RelativeLayout>
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            tools:text="@string/no_internet" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+
+            android:layout_width="match_parent"
+            android:id="@+id/refresh"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="10dp">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tasksList"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
 
 
