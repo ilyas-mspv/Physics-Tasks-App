@@ -3,31 +3,24 @@ package imspv.lycee.physics.Activities;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.StringTokenizer;
 
 import imspv.lycee.physics.DTO.Subtopic;
 import imspv.lycee.physics.DTO.Topic;
 import imspv.lycee.physics.DTO.TopicsData;
 import imspv.lycee.physics.R;
 import imspv.lycee.physics.helper.JSONParser;
+import me.srodrigo.androidhintspinner.HintAdapter;
+import me.srodrigo.androidhintspinner.HintSpinner;
 
 public class FilterActivity extends AppCompatActivity {
 
@@ -35,10 +28,10 @@ public class FilterActivity extends AppCompatActivity {
     private static String url_all_tasks = "http://physics.atlascience.ru/filter.php";
     private static final String TAG_RESPONSE = "success";
     JSONArray response = null;
-//TODO make a correct implements
+
     private ArrayList<Topic> topics;
     private ArrayList<Subtopic> subtopics;
-    Spinner topics_spinner, subtopics_spinner;
+    Spinner topics_spinner, subtopics_spinner, class_spinner;
 
     private ProgressDialog pDialog;
 
@@ -49,30 +42,13 @@ public class FilterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filter);
 
-        new  LoadTopics().execute();
-
-        initSpinners();
         initToolbar();
-    }
 
-    private void initSpinners() {
+        class_spinner = (Spinner) findViewById(R.id.classes_spinner);
         topics_spinner = (Spinner) findViewById(R.id.topics_spinner);
         subtopics_spinner= (Spinner) findViewById(R.id.subtopics_spinner);
 
-        topics = new ArrayList<Topic>();
-        subtopics = new ArrayList<Subtopic>();
 
-        topics_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
     }
 
     private void initToolbar() {
@@ -89,7 +65,6 @@ public class FilterActivity extends AppCompatActivity {
         protected Void doInBackground(Void... params) {
             List<NameValuePair> paramss = new ArrayList<NameValuePair>();
             JSONObject json = jParser.makeHttpRequest(url_all_tasks,"GET",paramss);
-
             topicsData = new TopicsData(FilterActivity.this, json.toString());
 
             return null;
@@ -110,31 +85,39 @@ public class FilterActivity extends AppCompatActivity {
             if (pDialog.isShowing())
                 pDialog.dismiss();
 
-            populateSpinner();
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    populateClasses();
+                }
+            });
         }
+    }
 
-        private void populateSpinner() {
-            List<String> topicsL = new ArrayList<String>();
-            List <String> subtopicsL = new ArrayList<>();
+    private void populateClasses() {
+        List<String> classesL = new ArrayList<>();
 
-            for (int i = 0; i < topics.size(); i++){
-                topicsL.add(topicsData.getTopicText(i));
+//        for (int i = 0; i< topicsData.getClassesSize();i++){
+//            classesL.add(topicsData.getClasesText(i));
+//        }
 
-            for (int a = 0; a< subtopics.size();a++){
+        HintSpinner<String> hintSpinnerClasses= new HintSpinner<>(class_spinner,
+                new HintAdapter<String>(this, R.string.hint_topics_spinner, classesL),
+                new HintSpinner.Callback<String>() {
+                    @Override
+                    public void onItemSelected(int position, String itemAtPosition) {
 
-                subtopicsL.add(topicsData.getSubtopicText(a,i));
-            }}
-            ArrayAdapter<String> topicsAdapter = new ArrayAdapter<String>(getApplicationContext(),
-                    android.R.layout.simple_spinner_item, topicsL);
-            ArrayAdapter<String> subtopicsAdapter = new ArrayAdapter<String>(getApplicationContext(),
-                    android.R.layout.simple_spinner_item, subtopicsL);
+                    }
+                });
 
-            subtopicsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            topicsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+       hintSpinnerClasses.init();
+    }
 
-            topics_spinner.setAdapter(topicsAdapter);
-            subtopics_spinner.setAdapter(subtopicsAdapter);
-        }
+    private  void populateTopics(){
+        List<String> topicsL = new ArrayList<>();
+//         for (int i = 0; i<topicsData.getTopicsSize();i++){
+//
+//         }
     }
 
 }

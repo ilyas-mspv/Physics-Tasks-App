@@ -32,9 +32,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <!-- <meta-data -->
-            <!-- android:name="android.support.PARENT_ACTIVITY" -->
-            <!-- android:value="imspv.lycee.physics.MainActivity" /> -->
+
         </activity>
         <activity
             android:name=".Activities.TaskDetailsActivity"
@@ -58,13 +56,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="imspv.lycee.physics.Activities.AllTasksActivity" />
         </activity>
-        <activity
-            android:name=".Activities.SettingsActivity"
-            android:label="@string/title_activity_settings"
-            android:parentActivityName=".Activities.AllTasksActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="imspv.lycee.physics.Activities.AllTasksActivity" />
+        <activity android:name=".Activities.SettingsActivity"
+            android:theme="@style/AppTheme">
         </activity>
     </application>
 

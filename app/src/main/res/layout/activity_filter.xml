@@ -23,29 +23,46 @@
 
 
     <RelativeLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:layout_height="match_parent">
 
+        <TextView
+            android:text="@string/classes_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_marginBottom="5dp" />
+
         <Spinner
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_height="40dp"
+            android:id="@+id/classes_spinner"
+            android:paddingBottom="20dp"
+            android:layout_below="@+id/textView2"
             android:layout_alignParentLeft="true"
-            android:entries="@array/complexities"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="79dp"
-
-            android:id="@+id/topics_spinner"/>
+            android:layout_alignParentStart="true" />
 
         <Spinner
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+
+            android:id="@+id/topics_spinner"
+            android:layout_height="40dp"
+            android:layout_below="@+id/classes_spinner"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:spinnerMode="dialog" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/select_topic"
+            android:id="@+id/subtopics_spinner"
             android:layout_below="@+id/topics_spinner"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:hint="@string/select_topic"
-            android:layout_marginTop="18dp"
-            android:id="@+id/subtopics_spinner" />
+            android:spinnerMode="dialog" />
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

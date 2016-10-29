@@ -1,19 +1,37 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory
+            android:title="General">
 
-    <Preference
-        android:defaultValue="true"
-        android:key="example_switch"
-        android:title="@string/pref_title_social_recommendations" />
+            <ListPreference
+                android:title="Change Theme"
+                android:key="listPref"
+                android:defaultValue="digiGreen"
+                android:entries="@array/pref_example_list_titles"
+                android:entryValues="@array/pref_example_list_titles" />
+            <Preference
+                android:key="create_task"
+                android:title="Create Task">
 
-    <!--android:summary="@string/pref_description_social_recommendations"-->
-    <ListPreference
-        android:defaultValue="-1"
-        android:entries="@array/pref_example_list_titles"
-        android:entryValues="@array/pref_example_list_values"
-        android:key="example_list"
-        android:negativeButtonText="@null"
-        android:positiveButtonText="@null"
-        android:title="@string/pref_title_add_friends_to_messages" />
-
-
+            </Preference>
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:title="Notifications">
+            <SwitchPreference
+                android:defaultValue="false"
+                android:title="New task notifications"
+                android:key="switch_preference_1" />
+            <RingtonePreference
+                android:dependency="switch_preference_1"
+                android:name="Ringtone Preference"
+                android:summary="Select a ringtone"
+                android:title="Ringtones"
+                android:key="ringtonePref" />
+            <SwitchPreference
+                android:defaultValue="false"
+                android:dependency="switch_preference_1"
+                android:title="Vibrate"
+                android:key="switch_preference_2" />
+        </PreferenceCategory>
 </PreferenceScreen>
+
+

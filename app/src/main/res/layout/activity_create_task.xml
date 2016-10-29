@@ -24,8 +24,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/view"
+        android:layout_alignEnd="@+id/view"
+        android:layout_margin="10dp">
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -69,29 +72,60 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner"
-            android:layout_below="@+id/view1"
-            android:layout_alignLeft="@+id/view1"
-            android:layout_alignStart="@+id/view1"
-            android:layout_marginTop="6dp"
-            android:spinnerMode="dropdown"
-            android:entries="@array/complexities"
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="6dp"
-            android:layout_marginBottom="12dp" />
-
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Create"
             android:id="@+id/create_task_btn"
-            android:layout_below="@+id/spinner"
-            android:layout_alignLeft="@+id/view1"
-            android:layout_alignStart="@+id/view1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:spinnerMode="dropdown"
+            android:entries="@array/complexities"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/imageButton4"
+            android:layout_below="@+id/view1"
+            android:layout_alignBottom="@+id/imageButton4"
+            android:layout_toLeftOf="@+id/imageButton4" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_plus"
+            android:id="@+id/imageButton4"
+            android:background="@null"
+            android:layout_below="@+id/view1"
             android:layout_alignRight="@+id/view1"
             android:layout_alignEnd="@+id/view1" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/topics_spinner_create"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/imageButton6"
+            android:layout_toStartOf="@+id/imageButton6"
+            android:layout_alignBottom="@+id/imageButton2"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/subtopics_spinner_create" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/topics_spinner_create"
+            android:layout_below="@+id/spinner"
+            android:layout_toStartOf="@+id/imageButton6"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

@@ -6,12 +6,15 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.security.PublicKey;
+
 
 public class TopicsData {
 
     JSONArray data;
 
     Context context;
+
 
     public TopicsData(Context context, String json) {
         try {
@@ -22,12 +25,20 @@ public class TopicsData {
         this.context = context;
     }
 
-    public String getTopicText(int position) {
+    public int getTopicsSize(){
+        return data.length();
+    }
+
+    public String getTopicsText(int position) {
         try {
             return data.getJSONObject(position).getString("topic");
         } catch (JSONException e) {
             return "null";
         }
+    }
+
+    public int getSubtopicsSize(int pos) throws JSONException {
+        return data.getJSONObject(pos).getJSONArray("subtopics").length();
     }
 
     public String getSubtopicText(int topic, int position) {
@@ -37,5 +48,4 @@ public class TopicsData {
             return "null";
         }
     }
-
 }

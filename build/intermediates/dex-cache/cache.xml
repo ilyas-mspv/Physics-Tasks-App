@@ -3,12 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\me.srodrigo\androidhintspinner\1.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.1"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_aef9da7aa4a0be11b5942af625026ea04d17cbd2\classes.dex" />
+        revision="24.0.3"
+        sha1="2df3ec030275f4d1f940012b325bbd6fdc46d598">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\me.srodrigo-androidhintspinner-1.0.0_8a9be5ee122c89b6c57e83731da50f001a30cb38\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="59545d60b11d569b6441b7db5e371af936d440e3">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a86c40755b29288517eb0fec8260877198e3b8e9\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -39,12 +48,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.1"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_e0ab3ea38d1bcf1f0f666a7870625fced9e7106b\classes.dex" />
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_5f190a88650f8668296f2c622be0025d5622d509\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -52,8 +61,17 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="dd898be0b2e6f91d456ef0ca5466f29c15ee9118">
+        sha1="84d2c5d60db55998ce93ca00154e7e6e7e708c1b">
         <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_0bfe8940c3ca4101997b40b07cf69ef32af312a4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_028d08b0785a8538de63eb9b19cb59555a0f9b85\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -66,21 +84,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.1.0\jars\classes.jar"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.1"
-        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
-        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\de.hdodenhof-circleimageview-2.1.0_281f153ec3747ac78b0e59d2138f8d74b155ca73\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\libs\json-20090211.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="c183aa3a2a6250293808bba12262c8920ce5a51c">
-        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\2\json-20090211_e5189501cd87db8ac528854b021bdbc0ea548e6b\classes.dex" />
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_0aef23087444a2c7a1c9d9d7cb31cde185a45807\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -102,12 +111,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jar="C:\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.1"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_0849f5c1d642a4184ad59c6196d26d9bb660ea38\classes.dex" />
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_5189148ff5c8b118c4fd51683a08e3f40fa024da\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -117,6 +126,177 @@
         revision="24.0.1"
         sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
         <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_62fa285495003563d6492533518acea3e0587d74\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_c617414ae2eedc57a3a4f59ea910012d19732f31\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_f0e7cff73e3fe58d91c2d6bd869dca9cd8777bab\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_93cbd569eda24c6a0c0afefa903d28e920720d22\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_e0ab3ea38d1bcf1f0f666a7870625fced9e7106b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_71b171955874eae8b37a67c5a814389c2c2f9106\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_5f190a88650f8668296f2c622be0025d5622d509\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_bd7edc8e5a139c5f6bbb10ba0b8ffb2b8d4c9cd5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_668e00d4f85bfbcc590ddc792bd0c9e9ac3c0c9c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="88521dd53a364b545ffe2e909f354a6272a53e08">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a86c40755b29288517eb0fec8260877198e3b8e9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_1ab12dc3e14accc57a3ebdcc1e29feadc4071343\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_bd7edc8e5a139c5f6bbb10ba0b8ffb2b8d4c9cd5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_d642d5f5101c04da7c0ae7a04a87a88db0037bcc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_aef9da7aa4a0be11b5942af625026ea04d17cbd2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\libs\json-20090211.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c183aa3a2a6250293808bba12262c8920ce5a51c">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\2\json-20090211_e5189501cd87db8ac528854b021bdbc0ea548e6b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_0849f5c1d642a4184ad59c6196d26d9bb660ea38\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_e0ab3ea38d1bcf1f0f666a7870625fced9e7106b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\de.hdodenhof-circleimageview-2.1.0_281f153ec3747ac78b0e59d2138f8d74b155ca73\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\libs\json-20090211.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c183aa3a2a6250293808bba12262c8920ce5a51c">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\2\json-20090211_e5189501cd87db8ac528854b021bdbc0ea548e6b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_0849f5c1d642a4184ad59c6196d26d9bb660ea38\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -147,39 +327,48 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.1"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_5f190a88650f8668296f2c622be0025d5622d509\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_bd7edc8e5a139c5f6bbb10ba0b8ffb2b8d4c9cd5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="20578d4299c40feec7dc72e83476e53d6a6dacbf">
-        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a86c40755b29288517eb0fec8260877198e3b8e9\classes.dex" />
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_4df8bd70a1d7aeb5cd147baf45525422671d4493\classes.dex" />
     </item>
     <item
         is-multidex="true"
         jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.1"
+        revision="24.0.3"
         sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
         <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_1ab12dc3e14accc57a3ebdcc1e29feadc4071343\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="bdc6412401de0fd29d92cdaad5d09c2b5b91f81f">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_0bfe8940c3ca4101997b40b07cf69ef32af312a4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_62fa285495003563d6492533518acea3e0587d74\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_aef9da7aa4a0be11b5942af625026ea04d17cbd2\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -189,6 +378,15 @@
         revision="24.0.1"
         sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
         <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_f0e7cff73e3fe58d91c2d6bd869dca9cd8777bab\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="C:\Android Projects\Lycee.Physics\Physics-Tasks-App-\app\build\intermediates\transforms\dex\debug\folders\1000\10\de.hdodenhof-circleimageview-2.1.0_281f153ec3747ac78b0e59d2138f8d74b155ca73\classes.dex" />
     </item>
 
 </items>

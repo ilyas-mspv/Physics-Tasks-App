@@ -54,6 +54,7 @@ public class TaskDetailsActivity extends AppCompatActivity {
 
         sharedPref = getSharedPreferences(MY_PREF, Context.MODE_PRIVATE);
         sharedPref.getString("title",TAG_TITLE);
+        Task = sharedPref.getString("task",TAG_TASK);
 
     }
 
@@ -62,7 +63,7 @@ public class TaskDetailsActivity extends AppCompatActivity {
         id = i.getStringExtra(TAG_ID);
         id = getIntent().getExtras().getString(TAG_ID);
         Tasktitle = getIntent().getExtras().getString(TAG_TITLE);
-        Task = getIntent().getExtras().getString(TAG_TASK);
+//        Task = getIntent().getExtras().getString(TAG_TASK);
         compexity = i.getStringExtra(COMPLEXITY);
         created_at = i.getStringExtra(TAG_CREATED);
         updated_at = i.getStringExtra(TAG_UPDATED);
