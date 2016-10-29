@@ -25,6 +25,7 @@ public class TopicsData {
         this.context = context;
     }
 
+
     public int getTopicsSize(){
         return data.length();
     }
@@ -48,4 +49,5 @@ public class TopicsData {
             return "null";
         }
     }
+
 }

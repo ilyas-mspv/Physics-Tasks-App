@@ -8,6 +8,7 @@
 
     <string name="select_topic">Select Topic</string>
     <string name="select_subtopic">Select Subtopic</string>
+    <string name="hint_class_spinner"> Choose Class.</string>
     <string name="hint_topics_spinner"> Choose Topic..</string>
     <string name="hint_subtopics_spinner"> Choose Subtopic..</string>
     <string name="title_activity_main2">fs</string>

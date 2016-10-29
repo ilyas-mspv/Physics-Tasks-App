@@ -208,7 +208,7 @@ TextView noInternet;
             case R.id.filter:
                 //TODO Alert
                 Toast.makeText(getApplicationContext(),"Не готово еще.",Toast.LENGTH_SHORT).show();
-//                startActivity(new Intent(this,FilterActivity.class));
+                startActivity(new Intent(this,FilterActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
