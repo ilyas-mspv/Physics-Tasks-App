@@ -20,4 +20,14 @@
     <string name="loading">Загрузка задачи. Подождите пожалуйста..</string>
     <string name="ok">Хорошо</string>
     <string name="task_id_number">Задача </string>
+    <string name="classes_hint">Выберите тему</string>
+    <string name="pref_header_general">Основные</string>
+    <string name="pref_title_add_friends_to_messages">Изменить тему приложения</string>
+    <string name="pref_title_new_message_notifications">Уведомлять о новых задачах</string>
+    <string name="pref_title_social_recommendations">Создать задачу</string>
+    <string name="pref_title_system_sync_settings"></string>
+    <string name="pref_title_vibrate">Вибрация</string>
+    <string name="select_subtopic">Выберите подтему</string>
+    <string name="select_topic">Выберите тему</string>
+    <string name="title_activity_filter">Фильтр</string>
 </resources>

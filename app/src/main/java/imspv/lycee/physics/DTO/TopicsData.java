@@ -6,8 +6,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.security.PublicKey;
-
 
 public class TopicsData {
 
@@ -49,5 +47,14 @@ public class TopicsData {
             return "null";
         }
     }
+
+    public String getSubtopicID(int topic, int position) {
+        try {
+            return data.getJSONObject(topic).getJSONArray("subtopics").getJSONObject(position).getString("unique_id");
+        } catch (JSONException e) {
+            return "null";
+        }
+    }
+
 
 }

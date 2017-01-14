@@ -11,45 +11,32 @@ import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.format.DateUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Locale;
 
 import imspv.lycee.physics.R;
 import imspv.lycee.physics.helper.JSONParser;
 
 public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
 
-    //TODO saving data to sharedPrefs
-    private Context context;
-    private ProgressDialog dialog;
-    JSONParser jParser = new JSONParser();
-    ArrayList<HashMap<String, String>> tasksList;
-    private static String url_all_tasks = "http://physics.atlascience.ru/get_all_tasks.php";
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_TASKS = "tasks";
     private static final String TAG_TASK = "task";
@@ -58,18 +45,19 @@ public class AllTasksActivity extends AppCompatActivity implements SwipeRefreshL
     private static final String TAG_CREATED = "created_at";
     private static final String TAG_UPDATED = "updated_at";
     private static final String COMPLEXITY = "complexity";
-    public  ListView lv;
-    JSONArray tasks = null;
-
-    SimpleAdapter simpleAdapter;
-
-    SharedPreferences sharedPref;
     public static String MY_PREF = "TaskData";
-
+    private static String url_all_tasks = "http://physics.atlascience.ru/get_all_tasks.php";
+    public  ListView lv;
+    JSONParser jParser = new JSONParser();
+    ArrayList<HashMap<String, String>> tasksList;
+    JSONArray tasks = null;
+    SimpleAdapter simpleAdapter;
+    SharedPreferences sharedPref;
     SwipeRefreshLayout mSwipeRefreshLayout;
 TextView noInternet;
-
-
+    //TODO saving data to sharedPrefs
+    private Context context;
+    private ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -207,7 +195,6 @@ TextView noInternet;
                 return true;
             case R.id.filter:
                 //TODO Alert
-                Toast.makeText(getApplicationContext(),"Не готово еще.",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this,FilterActivity.class));
                 return true;
             default:
@@ -270,10 +257,17 @@ TextView noInternet;
                             map.put(COMPLEXITY, complexity);
                             map.put(TAG_UPDATED, updated_at);
                             tasksList.add(map);
-                        }
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                        }}
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+
+                        runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            noInternet.setVisibility(View.VISIBLE);
+                            }
+                        });
                 }
 
 
@@ -286,7 +280,6 @@ TextView noInternet;
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-
                     simpleAdapter = new SimpleAdapter(AllTasksActivity.this,tasksList,R.layout.row_tasks, new String[]{
                             TAG_ID,TAG_TITLE, COMPLEXITY, TAG_CREATED,TAG_UPDATED,TAG_TASK
                     }, new int[]{R.id.id, R.id.title,R.id.complexity,R.id.date,R.id.updated_at,R.id.task_row});

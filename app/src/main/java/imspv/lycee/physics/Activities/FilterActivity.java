@@ -1,22 +1,28 @@
 package imspv.lycee.physics.Activities;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import imspv.lycee.physics.DTO.Topic;
+import imspv.lycee.physics.DTO.FilterData;
 import imspv.lycee.physics.R;
 import imspv.lycee.physics.helper.JSONParser;
 import me.srodrigo.androidhintspinner.HintAdapter;
@@ -24,12 +30,20 @@ import me.srodrigo.androidhintspinner.HintSpinner;
 
 public class FilterActivity extends AppCompatActivity {
 
+    private static final String TAG_SUCCESS = "success";
+    private static final String TAG_UNIQUE = "unique_id";
+    public static FilterData topicsData;
+    private static String url_filter = "http://physics.atlascience.ru/filter.php";
+    private static String url_find = "http://physics.atlascience.ru/find_tasks.php";
+    private static String url_unique = "http://physics.atlascience.ru/get_unique_id.php";
     JSONParser jParser = new JSONParser();
-    private static String url_all_tasks = "http://physics.atlascience.ru/filter.php";
-    private ProgressDialog pDialog;
-
+    JSONArray subtopics = null;
     Spinner topics_spinner, subtopics_spinner, class_spinner;
-    Topic topicsData;
+    FilterData topics_data;
+    int unique_id;
+    int un_id;
+    Button filter_btn;
+    private ProgressDialog pDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +55,14 @@ public class FilterActivity extends AppCompatActivity {
         class_spinner = (Spinner) findViewById(R.id.classes_spinner);
         topics_spinner = (Spinner) findViewById(R.id.topics_spinner);
         subtopics_spinner= (Spinner) findViewById(R.id.subtopics_spinner);
+
+        filter_btn = (Button) findViewById(R.id.filter_btn);
+        filter_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               new FindTasks().execute();
+            }
+        });
 
 
         new LoadTopics().execute();
@@ -65,7 +87,7 @@ public class FilterActivity extends AppCompatActivity {
 
         HintSpinner<String> hintSpinnerClass = new HintSpinner<>(
             class_spinner,
-            new HintAdapter<String>(this, R.string.hint_topics_spinner, classL),
+            new HintAdapter<String>(this, R.string.hint_class_spinner, classL),
             new HintSpinner.Callback<String>() {
                 @Override
                 public void onItemSelected(int position, String itemAtPosition) {
@@ -79,7 +101,6 @@ public class FilterActivity extends AppCompatActivity {
         );
         hintSpinnerClass.init();
     }
-
     private  void populateTopic(final int class_position) throws JSONException {
         List<String> topicL = new ArrayList<>();
 
@@ -105,12 +126,12 @@ public class FilterActivity extends AppCompatActivity {
         );
         hintSpinnerTopic.init();
     }
-
-    private void populateSubtopic(int class_pos,int topic_position) throws JSONException {
+    private void populateSubtopic(final int class_pos, final int topic_position) throws JSONException {
         List<String> subtopicL = new ArrayList<>();
 
         for (int i = 0; i < topicsData.getSubtopicSize(class_pos,topic_position); i++){
             subtopicL.add(topicsData.getSubtopicText(class_pos,topic_position,i));
+            unique_id =  topicsData.getUniqueID(class_pos,topic_position,i);
         }
         ArrayAdapter<String> subtopicAdapter = new ArrayAdapter<String>(getApplicationContext(),
                 android.R.layout.simple_spinner_item,subtopicL);
@@ -120,12 +141,37 @@ public class FilterActivity extends AppCompatActivity {
                 new HintSpinner.Callback<String>() {
                     @Override
                     public void onItemSelected(int position, String itemAtPosition) {
-
-                        Toast.makeText(getApplicationContext(),"YEEAAAAHHHH",Toast.LENGTH_SHORT).show();
+                        try {
+                            //TODO Do correctly
+                            final int id = topics_data.getUniqueID(class_pos,topic_position,position);
+                            Toast.makeText(getApplicationContext(),"Unique is: "+ id,Toast.LENGTH_SHORT).show();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
         );
         hintSpinnerSubtopic.init();
+    }
+
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == 100) {
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
+    }
+
+    private void sendUnique_id() {
+        Intent intent = new Intent(getApplicationContext(),FoundTasks.class);
+
+        intent.putExtra(TAG_UNIQUE,unique_id);
+
+        startActivityForResult(intent,100);
     }
 
     class LoadTopics extends AsyncTask<Void, Void, Void> {
@@ -133,9 +179,10 @@ public class FilterActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... params) {
             List<NameValuePair> paramss = new ArrayList<NameValuePair>();
-            JSONObject json = jParser.makeHttpRequest(url_all_tasks,"GET",paramss);
-            topicsData = new Topic(FilterActivity.this, json.toString());
-
+            JSONObject json = jParser.makeHttpRequest(url_filter,"GET",paramss);
+            JSONObject js = jParser.makeHttpRequest(url_unique,"GET",paramss);
+            topicsData = new FilterData(FilterActivity.this, json.toString());
+            topics_data = new FilterData(FilterActivity.this, js.toString());
             return null;
         }
 
@@ -153,7 +200,6 @@ public class FilterActivity extends AppCompatActivity {
             super.onPostExecute(aVoid);
             if (pDialog.isShowing())
                 pDialog.dismiss();
-
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -162,4 +208,35 @@ public class FilterActivity extends AppCompatActivity {
             });
         }
     }
+
+    class FindTasks extends AsyncTask<Void, Void, Void>{
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            //GET UNIQUE_ID FROM SERVER
+            List<NameValuePair> paramsss = new ArrayList<NameValuePair>();
+            JSONObject jn= jParser.makeHttpRequest(url_filter,"GET",paramsss);
+            Log.d("JSON IS",jn.toString());
+
+
+            //FIND BY UNIQUE_ID
+            List<NameValuePair> paramss = new ArrayList<NameValuePair>();
+            paramss.add(new BasicNameValuePair(TAG_UNIQUE,String.valueOf(un_id)));
+            JSONObject json = jParser.makeHttpRequest(url_find,"GET",paramss);
+            topicsData = new FilterData(FilterActivity.this, json.toString());
+
+            try{
+                int success = json.getInt(TAG_SUCCESS);
+                if(success ==1){
+                    sendUnique_id();
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+
+            return null;
+        }
+    }
+
 }
